@@ -13,10 +13,11 @@ of Which Order
 ## Dependencies Needed
 * Python2 or Python3 (Both Compatible)
 * argparse library (pip install argparse)
-* Ordered Dict Library (pip install collections)
+* Ordered Dict library (pip install collections)
 * Scipy Library (pip install scipy) - For Euclidean Distance
 * json library (Already a Built-In Module with Python)
 * unittest library (Already a Built-In Module with Python)
+* filecmp library (pip install filecmp) - For File Comparison Testing 
 
 ## Usage
 To get the Text File for Orders, run: python fix_routing_problem.py -o /PATHTOORDERSJSON -p /PATHTOPARTNERS<br>
