@@ -20,6 +20,9 @@ of Which Order
 
 ## Usage
 To get the Text File for Orders, run: python fix_routing_problem.py -o /PATHTOORDERSJSON -p /PATHTOPARTNERS<br>
+
+The Text File will be CREATED in the Same folder as the ORDERS JSON File inputted.
+
 The order of the command line arguments do not matter, use '-h' option for help. Can Specify Local or Absolute Path to the Orders and Partner JSON Files. If Permission Problems for opening JSON Files, run 'chmod 755 'JSONFILES'<br>
 *I Chose to Add the Command Line Options for Clarity for the user on Which File is Which - ORDERS and PARTNERS*
 
