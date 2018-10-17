@@ -38,7 +38,7 @@ Run: python automated_tests.py -v
 ## Design Implementation
 I chose to go the Object - Oriented Route in creating Orders, SingleOrder, PartnersDB, and OrderCalculator Classes since all can be stand alone - for future extendibilty with other Objects. The Classes are all simple with obvious User Interfaces (function names) for anyone to pick up and code (Add and Change Implementations). This design was rather simple with Python's built in JSON Parsing Library and Argument Parser.<br>
 <br>
-Some Ideas for Further Improvements would be to have the PartnersDB Connect to a Database on a Server - probably MongoDB since their Stores are similar to JSON Objects. Then, the 'find' access times for Partners would improve rather than searching through all the Base Prices like I am doing now (Which is NOT Constant). For Each SingleOrder in the list of Orders, I am searching through all the Partners. If there are N Orders and M Partners, My run-time is actually: O(N*M) <br>
+Some Ideas for Further Improvements would be to have the PartnersDB Connect to a Database on a Server - probably MongoDB since their Stores are similar to JSON Objects. Then, the 'find' access times for Partners would improve rather than searching through all the Partners like I am doing now (Which is NOT Constant). For Each SingleOrder in the list of Orders, I am searching through all the Partners. If there are N Orders and M Partners, My run-time is actually: O(N*M) <br>
 I would improve this with a DataBase Selection for Partners!
 
 ## Resources
