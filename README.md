@@ -3,8 +3,7 @@ Lob 2019 Internship Coding Challenge
 
 ## Purpose
 * READ INSTRUCTIONS.pdf<br>
-* The Great Routing Problem Program - Outputs Which Partner of Lob with Take Care
-of Which Order
+* The Great Routing Problem Program - Outputs Which Partner of Lob will Take Care of Which Order
 
 ## Technologies Used
 * Developed on the macOS High Sierra Version 10.13.6 using Visual Studio Code<br>
