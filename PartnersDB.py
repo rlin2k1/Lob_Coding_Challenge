@@ -20,7 +20,7 @@ class PartnersDB:
     PartnersDB Class - Represents a Database for Partners.
     
     Attributes:
-        _partners_json (JSON Object): JSON Object Represented in the Base Price
+        _partners_json (JSON Object): JSON Object Represented in the Partners
         JSON File.
         _partners_count (Integer): The Count of the Number of Partners in the
         JSON
@@ -123,13 +123,17 @@ class PartnersDB:
             order (SingleOrder): Represents a Order Item in the Lob Universe.
         Returns:
             (String): The Optimum Partner ID as a String. 
-            Sentinel: Returns Empty String if ERROR and Price Cannot Be Found.
+            Sentinel: Returns Empty String if ERROR and Partner Cannot Be Found.
         """
         optimum_partner = ""
         minimum_distance = sys.maxsize
         for partner in self._partners_json:
-            if (order.get_resource() == partner['resource']) and (order.get_order_type() in partner['type']) and partner['capacity'] > 0:
-                current_distance = dist.euclidean((order.get_latitude(), order.get_longitude()), (partner['address']['latitude'], partner['address']['longitude']))
+            if (order.get_resource() == partner['resource']) and \
+            (order.get_order_type() in partner['type']) and \
+            partner['capacity'] > 0:
+                current_distance = dist.euclidean((order.get_latitude(), \
+                order.get_longitude()), (partner['address']['latitude'], \
+                partner['address']['longitude']))
                 if(current_distance < minimum_distance):
                     minimum_distance = current_distance
                     optimum_partner = partner

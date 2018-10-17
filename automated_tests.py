@@ -44,7 +44,7 @@ list_of_orders_count = [10, 69, 36, 99, 42]
 
 list_of_partners_count = [10]
 
-class TestPriceCalculator(unittest.TestCase):
+class TestOrderCalculator(unittest.TestCase):
     def test_answer_files_json(self):
         print()
         print("Following Tests tested with Partner File: " + \
@@ -73,7 +73,8 @@ class TestPriceCalculator(unittest.TestCase):
                     file.write(order + '\n')
                     print(order)
             file.close()
-            self.assertEqual(True, filecmp.cmp(list_of_answer_jsons[i], list_of_order_jsons[i].split('.json')[0] + '.txt') )
+            self.assertEqual(True, filecmp.cmp(list_of_answer_jsons[i], \
+            list_of_order_jsons[i].split('.json')[0] + '.txt') )
             print("Same as Corresponding Answer File - PASS")
             print()
         print("----------------------------------------------------------------\

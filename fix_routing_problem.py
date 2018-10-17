@@ -40,6 +40,25 @@ def return_json_data(path_to_file):
         print("Cannot Open the Path to " + path_to_file)
         exit(1)
 
+def output_order(path_to_orders, order_calculator):
+    """
+    Outputs the Order Partner Relationships to a File Specified in the Same
+    Folder as the path to the order. - As .txt File!
+    
+    Args:
+        path_to_orders(String): Path to the Input Argument Specified by Orders
+    Returns:
+        (None): VOID.
+    """
+    file = open(path_to_orders.split('.json')[0] + '.txt', 'w')
+    partner_order_dict = (order_calculator.get_partner_orders())
+    for key, value in partner_order_dict.items():
+        file.write(key + '\n') 
+        for order in value:
+            file.write(order + '\n')
+    file.close()
+    return
+
 def main():
     """
     main Function for the Lob Coding Challenge of Calculating which Partner gets
@@ -89,13 +108,7 @@ def main():
     # ------------------------------------------------------------------------ #
     # Output Each Order for Each Partner
     # ------------------------------------------------------------------------ #
-    file = open(path_to_orders.split('.')[0] + '.txt', 'w')
-    partner_order_dict = (order_calculator.get_partner_orders())
-    for key, value in partner_order_dict.items():
-        file.write(key + '\n') 
-        for order in value:
-            file.write(order + '\n')
-    file.close()
+    output_order(path_to_orders, order_calculator)
     return
 
 if __name__ == '__main__':
