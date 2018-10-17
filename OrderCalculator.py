@@ -15,7 +15,7 @@ from PartnersDB import PartnersDB
 
 class OrderCalculator:
     """
-    OrderCalculator Class - Calculator for Which Orders go With Which Products
+    OrderCalculator Class - Calculator for Which Orders go With Which Partners
     in the Lob Universe.
     
     Attributes:

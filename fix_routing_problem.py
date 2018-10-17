@@ -34,6 +34,7 @@ def return_json_data(path_to_file):
     try:
         opened_file = open(path_to_file, 'r')
         json_object = json.load(opened_file)
+        opened_file.close()
         return json_object
     except:
         print("Cannot Open the Path to " + path_to_file)
@@ -94,6 +95,7 @@ def main():
         file.write(key + '\n') 
         for order in value:
             file.write(order + '\n')
+    file.close()
     return
 
 if __name__ == '__main__':
