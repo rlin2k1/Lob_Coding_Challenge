@@ -1,5 +1,5 @@
 """ automated_tests.py
-Automated Tests for the Lob 2019 Internship Coding Challenge
+Automated Tests for the Lob Great Routing Problem
 DO NOT FORGET EDGE CASES!
     -No Partners
     -No Orders
