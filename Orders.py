@@ -23,11 +23,11 @@ class Orders:
     """
     def __init__(self, orders_json):
         """
-        Constructor for the Orderse Class.
+        Constructor for the Orders Class.
         
         Args:
             self (none): None.
-            roders_json (JSON Object): JSON Object Represented in the Orders 
+            orders_json (JSON Object): JSON Object Represented in the Orders 
             JSON File.
         
         Returns:
